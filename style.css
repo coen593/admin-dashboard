@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /* Top level and general styling */
 :root {
-    --bright-blue: rgb(0, 162, 255);
-    --light-blue: rgb(165, 213, 218);
+    --bright-blue: rgb(0, 121, 190);
+    --light-blue: rgb(206, 230, 233);
     --blue-shade: rgb(132, 177, 182);
     --dark-blue: rgb(1, 0, 83);
     --yellow: rgb(250, 214, 10);
@@ -20,6 +20,15 @@
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
     height: 100vh;
+}
+
+/* General avatar styling */
+.avatar {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 0 -2%;
 }
 
 /* Sidebar styling */
@@ -74,16 +83,89 @@
 
 .sidebar ul li a:hover {
     color: var(--dark-blue);
+    transform: scale(0.99);
 }
 
+/* Header styling */
 .header {
     padding: 20px 40px 20px 30px;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 3fr 4fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 30px;
+    box-shadow: 2px 2px 5px var(--blue-shade);
 }
 
+.search {
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    align-items: center;
+}
+
+.search input {
+    height: 2.5em;
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 1.3em;
+    padding: 1em;
+}
+
+.search input:hover,
+.search input:focus {
+    box-shadow: 0 1px 5px var(--blue-shade);
+}
+
+#top-right-icons {
+    display: grid;
+    grid-template-columns: 2fr 2fr 5fr;
+    align-items: center;
+    text-align: right;
+}
+
+#top-right-icons img {
+    margin-left: 70px;
+}
+
+#top-right-icons span {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#greeting {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+#greeting .avatar {
+    grid-row: 1 / 3;
+    transform: scale(1.5);
+}
+
+#greeting h6 {
+    font-weight: 600;
+    align-items: end;
+}
+
+#greeting h2 {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+#nav-buttons .btn {
+    background-color: var(--bright-blue);
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    width: 6em;
+    border-radius: 500px;
+}
+
+/* Main content styling below */
 .content {
     padding: 20px;
     display: grid;
@@ -93,4 +175,9 @@
 
 .projects {
     grid-area: 1 / 1 / 3 / 2;
+
+}
+
+.content h3 {
+    margin-top: 15px;
 }
