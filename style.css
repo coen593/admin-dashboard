@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --bright-blue: rgb(0, 162, 255);
+    --light-blue: rgb(165, 213, 218);
+    --blue-shade: rgb(132, 177, 182);
+    --yellow: rgb(250, 214, 10);
+    --off-white: rgb(235, 227, 227);
+    --off-white-filter: invert(84%) sepia(29%) saturate(33%) hue-rotate(314deg) brightness(99%) contrast(104%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.sidebar {
+    grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    grid-template-rows: 1fr 3fr 5fr;
+    padding: 20px;
+    background-color: var(--bright-blue);
+    color: var(--off-white)
+}
+
+.sidebar img {
+    filter: var(--off-white-filter);
+}
+
+.sidebar a {
+    text-decoration: none;
+    color:var(--off-white);
+}
+
+.header {
+    padding: 20px 40px 20px 30px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 3fr 4fr;
+    row-gap: 30px;
+}
+
+.content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+    grid-area: 1 / 1 / 3 / 2;
+}
